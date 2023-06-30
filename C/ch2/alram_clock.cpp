@@ -19,7 +19,7 @@ int main(void)
         }
         minute += 15;
     }
-    std::cout << hour << minute << std::endl;
+    std::cout << hour << " " << minute << std::endl;
 
     return 0;
 }
