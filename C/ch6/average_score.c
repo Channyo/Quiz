@@ -7,11 +7,11 @@ int main(void) {
     char subj[51], subj_alphabet[3];
     float rate, sum = 0.0, aver_score, sum_rate_num = 0.0;
     float sbuj_score[2][4] = {{4.5, 3.5, 2.5, 1.5},{4.0, 3.0, 2.0, 1.0}};
-    int i, subj_num = 20;
+    int i;
 
     for(i = 0; i < SUBJECT_MAX; i++) {
         scanf("%s %f %s", subj, &rate, subj_alphabet);
-        if(subj_alphabet[0] != 'F') {
+        if((subj_alphabet[0] != 'F') && (subj_alphabet[0] != 'P')) {
             sum_rate_num += rate;
             if(subj_alphabet[1] == '+') {
                 sum += (sbuj_score[0][subj_alphabet[0] - 'A'] * rate);
